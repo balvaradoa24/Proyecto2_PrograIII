@@ -1,0 +1,54 @@
+Inicio
+
+Función calcularTotal():
+    Leer y seleccionar todas las casillas de verificación "materia" que estén marcadas
+    Asignar costoPorMateria = 50  // Costo por cada materia seleccionada
+    Calcular total = cantidad de casillas seleccionadas * costoPorMateria
+    Mostrar el total calculado en la pantalla usando el elemento con id "totalAmount"
+    Ocultar el formulario de materias usando el elemento con id "subjectsForm"
+    Mostrar el total a pagar usando el elemento con id "totalCost"
+
+Función miMatricula():
+    Leer identificación del estudiante desde el elemento con id "identificacion"
+    Leer nombre del estudiante desde el elemento con id "nombre"
+    Leer apellidos del estudiante desde el elemento con id "apellido"
+    Leer género seleccionado del estudiante desde el elemento con name "genero" (marcado)
+    Leer fecha de nacimiento del estudiante desde el elemento con id "fechaNacimiento"
+    Leer edad del estudiante desde el elemento con id "edad"
+
+    Leer estado civil del estudiante desde el elemento con id "estadoCivil"
+    Leer número de celular del estudiante desde el elemento con id "numeroCelular"
+    Leer número de residencia del estudiante desde el elemento con id "numeroResidencia"
+    Leer número de familiar del estudiante desde el elemento con id "numeroFamiliar"
+    Leer correo electrónico del estudiante desde el elemento con id "correoElectronico"
+    Leer colegio del estudiante desde el elemento con id "colegio"
+
+    Leer provincia de residencia del estudiante desde el elemento con id "provincia"
+    Leer cantón de residencia del estudiante desde el elemento con id "canton"
+
+    Leer materias seleccionadas del estudiante desde todas las casillas de verificación "materia" marcadas
+    Calcular total a pagar multiplicando la cantidad de materias seleccionadas por costoPorMateria
+
+    Mostrar resumen de matrícula en la página web:
+        Mostrar identificación, nombre, apellidos, género, fecha de nacimiento, edad, estado civil,
+        número de celular, número de residencia, número de familiar, correo electrónico, colegio,
+        provincia, cantón, materias seleccionadas y total a pagar en los elementos correspondientes.
+
+    Mostrar el resumen de matrícula en la página web usando el elemento con id "resumenMatricula"
+
+    Guardar los datos de matrícula en el almacenamiento local (localStorage) del navegador.
+
+    Descargar un archivo de texto con los detalles de la matrícula:
+        Crear un elemento <a> con el contenido JSON de los datos de matrícula y nombre del archivo.
+        Añadir atributos href y download para descargar el archivo.
+        Simular un click en el elemento <a> para iniciar la descarga.
+        Eliminar el elemento <a> del documento después de la descarga.
+
+Función descargarArchivoTexto(contenido, nombreArchivo):
+    Crear un elemento <a> en el documento
+    Configurar atributos href y download del elemento para contener el contenido y nombre del archivo
+    Añadir el elemento al cuerpo del documento
+    Simular un click en el elemento para iniciar la descarga del archivo
+    Eliminar el elemento del documento después de la descarga
+
+Fin

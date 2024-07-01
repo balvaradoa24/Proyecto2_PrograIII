@@ -1,0 +1,49 @@
+Documento para comparar Bases de Datos relacionales y no relacionales
+
+En cuanto a la elección entre bases de datos relacionales (SQL) y no relacionales (NoSQL) para una aplicación de matrícula, es crucial considerar varios aspectos. Las bases de datos relacionales, como MySQL o PostgreSQL, utilizan tablas estructuradas con un esquema fijo, lo que las hace ideales para datos con relaciones complejas y donde la consistencia de los datos es crucial, como en sistemas financieros.
+Por otro lado, las bases de datos NoSQL, como MongoDB o Firebase Firestore, ofrecen una estructura más flexible con documentos que pueden variar en su composición. Esto es útil cuando se tienen datos que pueden cambiar frecuentemente, como las materias seleccionadas por los estudiantes. Además, NoSQL es altamente escalable horizontalmente, lo que significa que puede manejar grandes volúmenes de datos distribuidos eficientemente.
+Para la aplicación de matrícula, donde se necesita almacenar datos de estudiantes como nombre, apellido, correo electrónico y las materias seleccionadas, una base de datos NoSQL sería más adecuada. Esto se debe a su capacidad para manejar esquemas de datos flexibles y su escalabilidad, lo cual es crucial para adaptarse a un número creciente de registros de estudiantes y garantizar tiempos de respuesta rápidos durante períodos de alta demanda, como el período de matrícula.
+Bases de Datos Relacionales (SQL)
+
+Estructura de Datos:
+•	Tablas: Los datos se organizan en tablas estructuradas con filas y columnas.
+•	Esquema fijo: Cada tabla tiene un esquema definido con tipos de datos específicos para cada columna.
+•	Relaciones: Las relaciones entre tablas se establecen mediante claves primarias y foráneas.
+Escalabilidad:
+•	Vertical: Escalabilidad limitada en términos de añadir más recursos a un servidor (escalabilidad vertical).
+•	Consistencia: Transacciones ACID garantizan consistencia en operaciones complejas.
+Rendimiento:
+•	Transacciones complejas: Buen rendimiento para consultas complejas que involucran múltiples tablas y relaciones.
+•	Índices: Utilización de índices para optimizar búsquedas y consultas.
+Flexibilidad:
+•	Esquema rígido: Cambiar el esquema puede ser complicado y costoso debido a la necesidad de migraciones de datos y esquemas.
+•	Consistencia: Adecuada para aplicaciones donde la consistencia de los datos es crucial, como sistemas financieros o transaccionales.
+
+
+Bases de Datos No Relacionales (NoSQL)
+Estructura de Datos:
+•	Documentos: Los datos se almacenan en documentos flexibles (JSON, BSON) en lugar de tablas.
+•	Esquema dinámico: Cada documento puede tener estructuras diferentes sin un esquema fijo predefinido.
+•	Colecciones: Los documentos se agrupan en colecciones.
+Escalabilidad:
+•	Horizontal: Escalabilidad excelente al distribuir datos en múltiples servidores (escalabilidad horizontal).
+•	Partitioning: Datos distribuidos y partitioning automático para manejar grandes volúmenes de datos.
+Rendimiento:
+•	Operaciones simples y rápidas: Ideal para operaciones de lectura y escritura rápidas y simples en grandes conjuntos de datos distribuidos.
+•	Escalabilidad lineal: Mejor rendimiento en entornos distribuidos y grandes volúmenes de datos.
+Flexibilidad:
+•	Esquema flexible: Facilita cambios en la estructura de datos sin necesidad de migraciones costosas.
+•	Consistencia eventual: Adecuada cuando la disponibilidad y la partición de datos son más críticas que la consistencia estricta.
+Justificación para la Aplicación de Matrícula
+Para la aplicación de matrícula descrita en el HTML proporcionado:
+Estructura de Datos:
+•	Datos estructurados: Los datos del estudiante (nombre, apellido, correo electrónico) podrían almacenarse en una estructura tabular típica de una base de datos relacional.
+•	Datos seleccionados (materias): Las materias seleccionadas podrían ser almacenadas en un formato de documentos dentro de una colección en una base de datos NoSQL, ya que su estructura puede variar y no necesariamente requiere relaciones complejas.
+Escalabilidad:
+•	Volumen de datos: Con la posibilidad de crecimiento del número de estudiantes y materias, una base de datos NoSQL podría ser más adecuada debido a su capacidad de escalabilidad horizontal sin impactar el rendimiento.
+•	Disponibilidad: La disponibilidad continua durante picos de matrícula es crucial, y NoSQL podría proporcionar mejor disponibilidad y tolerancia a fallos debido a su arquitectura distribuida.
+Rendimiento:
+•	Consultas simples y rápidas: Para mostrar el resumen de matrícula y calcular el total a pagar, las consultas simples y rápidas en una base de datos NoSQL pueden ser más eficientes, especialmente en un entorno web donde la respuesta rápida es esencial.
+Flexibilidad:
+•	Evolución de datos: Los requisitos cambiantes de la aplicación, como la adición de nuevas materias o campos opcionales en el formulario de matrícula, se pueden manejar más fácilmente con una base de datos NoSQL debido a su esquema flexible.
+

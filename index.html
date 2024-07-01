@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrícula de Estudiantes de la Universidad Latina</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario de Matrícula de Estudiantes</h1>
+        <h2>Universidad Latina</h2>
+        
+
+        <form id="datosPersonales">
+            <h2>Datos Personales</h2>
+            <label for="identificacion">Número de Identificación:</label>
+            <input type="text" id="identificacion" name="identificacion" required>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="apellido">Apellidos:</label>
+            <input type="text" id="apellido" name="apellido" required>
+            <label for="genero">Género:</label>
+            <select id="genero" name="genero" required>
+                <option value="">Seleccione...</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+            </select>
+            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" required>
+        </form>
+
+        <form id="infoContacto">
+            <h2>Información de Contacto</h2>
+            <label for="estadoCivil">Estado Civil:</label>
+            <select id="estadoCivil" name="estadoCivil" required>
+                <option value="">Seleccione...</option>
+                <option value="soltero">Soltero/a</option>
+                <option value="casado">Casado/a</option>
+                <option value="unionLibre">Unión Libre</option>
+            </select>
+            <label for="numeroCelular">Número de Celular:</label>
+            <input type="text" id="numeroCelular" name="numeroCelular" required>
+            <label for="numeroResidencia">Número de Residencia:</label>
+            <input type="text" id="numeroResidencia" name="numeroResidencia" required>
+            <label for="numeroFamiliar">Número de Familiar:</label>
+            <input type="text" id="numeroFamiliar" name="numeroFamiliar" required>
+            <label for="correoElectronico">Correo Electrónico:</label>
+            <input type="email" id="correoElectronico" name="correoElectronico" required>
+            <label for="colegio">Colegio:</label>
+            <select id="colegio" name="colegio" required>
+                <option value="">Seleccione...</option>
+                <option value="LiceoCostaRica">Liceo de Costa Rica</option>
+                <option value="Panamerican">Panamerican</option>
+            </select>
+        </form>
+
+        <form id="direccion">
+            <h2>Dirección</h2>
+            <label for="provincia">Provincia:</label>
+            <select id="provincia" name="provincia" required>
+                <option value="">Seleccione...</option>
+                <option value="SAN JOSE">SAN JOSE</option>
+                <option value="ALAJUELA">ALAJUELA</option>
+                <option value="HEREDIA">HEREDIA</option>
+                <option value="GUANACASTE">GUANACASTE</option>
+                <option value="LIMON">LIMON</option>
+            </select>
+            <label for="canton">Cantón:</label>
+            <select id="canton" name="canton" required>
+                <option value="">Seleccione...</option>
+                <option value="SAN PEDRO">San Pedro</option>
+                <option value="BELEN">Belen</option>
+            </select>
+        </form>
+
+        <form id="subjectsForm">
+            <h2>Selección de Materias</h2>
+            <label for="fundamentosProgramacion">Fundamentos de Programación:</label>
+            <input type="checkbox" id="fundamentosProgramacion" name="materia" value="Fundamentos de Programación">
+            <label for="Programacion1">Programación 1:</label>
+            <input type="checkbox" id="Programacion1" name="materia" value="Programación 1">
+            <label for="Programacion2">Programación 2:</label>
+            <input type="checkbox" id="Programacion2" name="materia" value="Programación 2">
+        </form>
+
+        <div id="totalCost" style="display: none;">
+            <h2>Total a Pagar:</h2>
+            <p id="totalAmount">$0</p>
+        </div>
+
+        <button onclick="calcularTotal()">Calcular Total</button>
+        <br>
+        <br>
+        <button onclick="miMatricula()">Matricular</button>
+
+        <div id="resumenMatricula" style="display: none;">
+            <h2>Resumen de Matrícula:</h2>
+            <p><strong>Número de Identificación:</strong> <span id="resumenIdentificacion"></span></p>
+            <p><strong>Nombre:</strong> <span id="resumenNombre"></span></p>
+            <p><strong>Apellidos:</strong> <span id="resumenApellidos"></span></p>
+            <p><strong>Género:</strong> <span id="resumenGenero"></span></p>
+            <p><strong>Fecha de Nacimiento:</strong> <span id="resumenFechaNacimiento"></span></p>
+            <p><strong>Edad:</strong> <span id="resumenEdad"></span></p>
+            <p><strong>Estado Civil:</strong> <span id="resumenEstadoCivil"></span></p>
+            <p><strong>Número de Celular:</strong> <span id="resumenNumeroCelular"></span></p>
+            <p><strong>Número de Residencia:</strong> <span id="resumenNumeroResidencia"></span></p>
+            <p><strong>Número de Familiar:</strong> <span id="resumenNumeroFamiliar"></span></p>
+            <p><strong>Correo Electrónico:</strong> <span id="resumenCorreoElectronico"></span></p>
+            <p><strong>Colegio:</strong> <span id="resumenColegio"></span></p>
+            <p><strong>Provincia:</strong> <span id="resumenProvincia"></span></p>
+            <p><strong>Cantón:</strong> <span id="resumenCanton"></span></p>
+            <p><strong>Materias Seleccionadas:</strong> <span id="resumenMaterias"></span></p>
+            <p><strong>Total a Pagar:</strong> <span id="resumenTotalPagar"></span></p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
