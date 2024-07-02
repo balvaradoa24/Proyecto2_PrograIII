@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matrícula de Estudiantes de la Universidad Latina</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.6.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -91,29 +92,85 @@
             <p id="totalAmount">$0</p>
         </div>
 
-        <button onclick="calcularTotal()">Calcular Total</button>
+        <button onclick="calcularTotal()" class="button">Calcular Total</button>
         <br>
         <br>
-        <button onclick="miMatricula()">Matricular</button>
-
+        <button onclick="miMatricula()" class="button1">Matricular</button>
+        <br>
+        <br>
         <div id="resumenMatricula" style="display: none;">
-            <h2>Resumen de Matrícula:</h2>
-            <p><strong>Número de Identificación:</strong> <span id="resumenIdentificacion"></span></p>
-            <p><strong>Nombre:</strong> <span id="resumenNombre"></span></p>
-            <p><strong>Apellidos:</strong> <span id="resumenApellidos"></span></p>
-            <p><strong>Género:</strong> <span id="resumenGenero"></span></p>
-            <p><strong>Fecha de Nacimiento:</strong> <span id="resumenFechaNacimiento"></span></p>
-            <p><strong>Edad:</strong> <span id="resumenEdad"></span></p>
-            <p><strong>Estado Civil:</strong> <span id="resumenEstadoCivil"></span></p>
-            <p><strong>Número de Celular:</strong> <span id="resumenNumeroCelular"></span></p>
-            <p><strong>Número de Residencia:</strong> <span id="resumenNumeroResidencia"></span></p>
-            <p><strong>Número de Familiar:</strong> <span id="resumenNumeroFamiliar"></span></p>
-            <p><strong>Correo Electrónico:</strong> <span id="resumenCorreoElectronico"></span></p>
-            <p><strong>Colegio:</strong> <span id="resumenColegio"></span></p>
-            <p><strong>Provincia:</strong> <span id="resumenProvincia"></span></p>
-            <p><strong>Cantón:</strong> <span id="resumenCanton"></span></p>
-            <p><strong>Materias Seleccionadas:</strong> <span id="resumenMaterias"></span></p>
-            <p><strong>Total a Pagar:</strong> <span id="resumenTotalPagar"></span></p>
+            <h2 style="text-align: center;">Mi Matrícula Creada</h2>
+            <table>
+                <tr>
+                    <th>Campo</th>
+                    <th>Valor</th>
+                </tr>
+                <tr>
+                    <td><strong>Número de Identificación:</strong></td>
+                    <td><span id="resumenIdentificacion"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Nombre:</strong></td>
+                    <td><span id="resumenNombre"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Apellidos:</strong></td>
+                    <td><span id="resumenApellidos"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Género:</strong></td>
+                    <td><span id="resumenGenero"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Fecha de Nacimiento:</strong></td>
+                    <td><span id="resumenFechaNacimiento"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Edad:</strong></td>
+                    <td><span id="resumenEdad"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Estado Civil:</strong></td>
+                    <td><span id="resumenEstadoCivil"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Número de Celular:</strong></td>
+                    <td><span id="resumenNumeroCelular"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Número de Residencia:</strong></td>
+                    <td><span id="resumenNumeroResidencia"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Número de Familiar:</strong></td>
+                    <td><span id="resumenNumeroFamiliar"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Correo Electrónico:</strong></td>
+                    <td><span id="resumenCorreoElectronico"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Colegio:</strong></td>
+                    <td><span id="resumenColegio"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Provincia:</strong></td>
+                    <td><span id="resumenProvincia"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Cantón:</strong></td>
+                    <td><span id="resumenCanton"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Materias Seleccionadas:</strong></td>
+                    <td><span id="resumenMaterias"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Total a Pagar:</strong></td>
+                    <td><span id="resumenTotalPagar"></span></td>
+                </tr>
+            </table>
+        
         </div>
     </div>
 

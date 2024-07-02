@@ -1,8 +1,8 @@
 function calcularTotal() {
     var checkboxes = document.querySelectorAll('input[name="materia"]:checked');
-    var costoPorMateria = 50; 
+    var costoPorMateria = 75000; 
     var total = checkboxes.length * costoPorMateria;
-    document.getElementById('totalAmount').textContent = '$' + total;
+    document.getElementById('totalAmount').textContent = '₡' + total;
     
     document.getElementById('subjectsForm').style.display = 'none';
     document.getElementById('totalCost').style.display = 'block';
@@ -12,7 +12,7 @@ function miMatricula() {
     let identificacion = document.getElementById('identificacion').value;
     let nombre = document.getElementById('nombre').value;
     let apellido = document.getElementById('apellido').value;
-    let generoElement = document.querySelector('input[name="genero"]:checked');
+    let generoElement = document.querySelector('genero').value;
     let genero = generoElement ? generoElement.value : '';
     let fechaNacimiento = document.getElementById('fechaNacimiento').value;
     let edad = document.getElementById('edad').value;
@@ -48,7 +48,7 @@ function miMatricula() {
     document.getElementById('resumenProvincia').textContent = provincia;
     document.getElementById('resumenCanton').textContent = canton;
     document.getElementById('resumenMaterias').textContent = materiasSeleccionadas.join(', ');
-    document.getElementById('resumenTotalPagar').textContent = '$' + document.getElementById('totalAmount').textContent.substring(1); // Total a pagar
+    document.getElementById('resumenTotalPagar').textContent = '₡' + document.getElementById('totalAmount').textContent.substring(1);
 
     document.getElementById('resumenMatricula').style.display = 'block';
 
@@ -67,7 +67,8 @@ function miMatricula() {
         colegio: colegio,
         provincia: provincia,
         canton: canton,
-        materiasSeleccionadas: materiasSeleccionadas
+        materiasSeleccionadas: materiasSeleccionadas,
+
     };
     localStorage.setItem('matricula', JSON.stringify(matricula));
 
