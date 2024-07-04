@@ -1,21 +1,32 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #fff;
+    color: #ffffff;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .container {
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: #fff;
+    width: 80%;
+    background-color: #003780; 
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2 {
-    color: #333;
+.form-container {
+    background-color: #ffd700; 
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+    color: #fff;
     text-align: center;
 }
 
@@ -23,63 +34,133 @@ form {
     margin-bottom: 20px;
 }
 
-label {
-    display: block;
-    margin-bottom: 8px;
+form h3 {
+    color: #ffffff; 
+    background-color: #fff; 
+    padding: 10px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-radius: 5px;
 }
 
-input[type=text], input[type=email], input[type=checkbox] {
-    width: 100%;
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+    width: calc(100% - 12px); 
     padding: 8px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
+    font-size: 16px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
 select {
     width: 100%;
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-    background-color: #fff;
-    transition: border-color 0.3s ease-in-out;
 }
 
-select:focus {
-    outline: none;
-    border-color: #4CAF50;
+.buttons {
+    text-align: center;
 }
 
-select option {
-    padding: 8px;
-}
-
-button {
+.buttons button {
     padding: 10px 20px;
-    background-color: #4CAF50;
-    color: #fff;
+    margin: 10px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    font-weight: bold;
 }
 
-button:hover {
-    background-color: #45a049;
+.buttons button:nth-child(1) {
+    background-color: #800000; 
+    color: #fff; 
 }
 
-#totalCost {
-    margin-bottom: 20px;
+.buttons button:nth-child(2) {
+    background-color: #ffd700;
+    color: #000; 
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00ffff; 
+    color: white; 
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px; 
+    transition: background-color 0.3s ease;
+}
+
+.button1 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #c8ff00; 
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px; 
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.button:active {
+    background-color: #004f9b;
+    transform: translateY(1px); 
 }
 
 #resumenMatricula {
-    border-top: 1px solid #ccc;
-    padding-top: 20px;
+    background-color: #ffd700; 
+    color: #3498db;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto; 
+}
+
+#resumenMatricula h2 {
+    color: #004280;
+    margin-bottom: 20px;
 }
 
 #resumenMatricula p {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 60%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border: 2px solid #3498db;
+    background-color: #f0f0f0; 
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; 
+}
+th {
+    background-color: #3498db; 
+    color: rgb(255, 255, 255); 
+}
+
+td {
+    border-bottom: 1px solid #ccc; 
 }
